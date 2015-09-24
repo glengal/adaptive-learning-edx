@@ -1,0 +1,20 @@
+Database structure: 
+
+ FYI: mongodb hierarchy
+ kc -> _id: Objectid,
+       name : string,
+       quiz : [ ObjectId of quiz, ... ],
+       student : [ObjectId of student, ...],
+       score : number
+       
+ quizzes -> _id : Objectid,
+            name : string,
+            value : number,
+            weight : number,
+            showanswer : string,
+            students : [ ObjectId of student, ...]
+  
+  students -> _id : Objectid,
+              attempts : number,
+              quizzes : [Objectid of quiz, ...]
+   
